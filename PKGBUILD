@@ -1,4 +1,4 @@
-# Maintainer: Alex Vegas <v34l@proton.me>
+# Maintainer: Alex Vegas <v34l at proton dot me>
 pkgname=chemiNot
 pkgver=1.0
 pkgrel=1
