@@ -12,4 +12,4 @@ pkgbase = cheminot
 	sha256sums = c0a998ec111672d5fc61de69f6f252432dc575807e92b1ffa6eccff9aee088cd
 	sha256sums = SKIP
 
-pkgname = chemiNot
+pkgname = cheminot
