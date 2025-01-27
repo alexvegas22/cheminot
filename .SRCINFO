@@ -1,0 +1,13 @@
+pkgbase = chemiNot
+	pkgdesc = Application de gestion d'horaire de l'ETS
+	pkgver = 1.0
+	pkgrel = 1
+	url = https://cheminotjws.etsmtl.ca/
+	arch = any
+	license = custom
+	depends = icedtea-web
+	depends = java-runtime
+	source = https://cheminotjws.etsmtl.ca/chemiNot.jnlp
+	sha256sums = c0a998ec111672d5fc61de69f6f252432dc575807e92b1ffa6eccff9aee088cd
+
+pkgname = chemiNot
