@@ -12,8 +12,7 @@ source=(
    # "https://www.etsmtl.ca/assets/img/ets.svg"  # Optional: Application icon
 )
 sha256sums=(
-    'SKIP'
-    #'c0a998ec111672d5fc61de69f6f252432dc575807e92b1ffa6eccff9aee088cd'  # Replace with the actual checksum for your .jnlp file
+    'c0a998ec111672d5fc61de69f6f252432dc575807e92b1ffa6eccff9aee088cd'  # Replace with the actual checksum for your .jnlp file
   #  'SKIP'  # Replace with the actual checksum for your icon file
 )
 
