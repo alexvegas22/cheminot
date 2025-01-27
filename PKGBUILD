@@ -8,7 +8,7 @@ url="https://cheminotjws.etsmtl.ca/"
 license=('custom')  # Replace with the appropriate license
 depends=('icedtea-web' 'java-runtime')  # Dependencies for running javaws
 source=(
-    "https://cheminotjws.etsmtl.ca/"
+    "https://cheminotjws.etsmtl.ca/chemiNot.jnlp"
    # "https://www.etsmtl.ca/assets/img/ets.svg"  # Optional: Application icon
 )
 sha256sums=(
