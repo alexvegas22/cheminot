@@ -30,7 +30,6 @@ Name=Cheminot
 Comment=$pkgdesc
 Exec=javaws /usr/share/java/$pkgname/chemiNot.jnlp
 Icon=/usr/share/pixmaps/$pkgname.png
-Name=Your App Name
 Terminal=false
 Type=Application
 Categories=Education;Utility;Application;Java
