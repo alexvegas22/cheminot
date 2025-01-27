@@ -1,4 +1,4 @@
-pkgbase = chemiNot
+pkgbase = cheminot
 	pkgdesc = Application de gestion d'horaire de l'ETS (license unknown)
 	pkgver = 2022.01.04
 	pkgrel = 1

@@ -1,5 +1,5 @@
 # Maintainer: Alex Vegas <v34l at proton dot me>
-pkgname=chemiNot
+pkgname=cheminot
 pkgver=2022.01.04
 pkgrel=1
 pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
