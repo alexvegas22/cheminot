@@ -6,14 +6,14 @@ pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
 arch=('any')
 url="https://cheminotjws.etsmtl.ca/"
 license=('custom')
-depends=('icedtea-web' 'java-runtime' 'jree8-openjdk')
+depends=('icedtea-web' 'java-runtime' 'jre8-openjdk')
 source=(
     "https://cheminotjws.etsmtl.ca/chemiNot.jnlp"
     "https://www.etsmtl.ca/assets/img/ets.svg"
 )
 sha256sums=(
     'c0a998ec111672d5fc61de69f6f252432dc575807e92b1ffa6eccff9aee088cd' 
-    'SKIP'
+    '24852c64b03d85e2987a3944882d5a5d81a1229ad0a5a1dfffd009b6c505e099'
 )
 
 package() {
