@@ -1,7 +1,7 @@
 # Maintainer: Alex Vegas <v34l at proton dot me>
 pkgname=cheminot
 pkgver=2022.01.04
-pkgrel=4
+pkgrel=5
 pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
 arch=('x86_64' 'aarch64')
 url="https://cheminotjws.etsmtl.ca/"
