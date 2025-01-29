@@ -32,8 +32,8 @@ EOF
 
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<EOF
 #!/bin/bash
-JAVA_HOME=$(ls -d /usr/lib/jvm/java-8-openjdk* 2>/dev/null | head -n 1)
-JAVAWS=\$(command -v javaws || echo "/usr/sbin/javaws")
+export JAVA_HOME=$(archlinux-java get 2>/dev/null | grep 'java-8' | sed 's|/jre||' || echo "/usr/lib/jvm/java-8-openjdk")
+export JAVAWS=\$(command -v javaws || echo "/usr/sbin/javaws")
 exec "\$JAVAWS" /usr/share/java/$pkgname/chemiNot.jnlp
 EOF
 }
