@@ -1,12 +1,12 @@
 # Maintainer: Alex Vegas <v34l at proton dot me>
 pkgname=cheminot
 pkgver=2022.01.04
-pkgrel=1
+pkgrel=2
 pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
 arch=('any')
 url="https://cheminotjws.etsmtl.ca/"
 license=('custom')
-depends=('icedtea-web' 'java-runtime')
+depends=('icedtea-web' 'java-runtime' 'jree8-openjdk')
 source=(
     "https://cheminotjws.etsmtl.ca/chemiNot.jnlp"
     "https://www.etsmtl.ca/assets/img/ets.svg"
@@ -17,27 +17,22 @@ sha256sums=(
 )
 
 package() {
-    # Install the .jnlp file
     install -Dm644 "$srcdir/chemiNot.jnlp" "$pkgdir/usr/share/java/$pkgname/chemiNot.jnlp"
-
-    # Install the icon
     install -Dm644 "$srcdir/ets.svg" "$pkgdir/usr/share/pixmaps/$pkgname.svg"
-
-    # Create a desktop entry
     install -Dm644 /dev/stdin "$pkgdir/usr/share/applications/$pkgname.desktop" <<EOF
 [Desktop Entry]
 Name=Cheminot
 Comment=$pkgdesc
-Exec=javaws /usr/share/java/$pkgname/chemiNot.jnlp
+Exec=/usr/bin/$pkgname
 Terminal=false
 Type=Application
 Categories=Education;Utility;Application;Java
 EOF
-Icon=/usr/share/pixmaps/$pkgname.png
+    Icon=/usr/share/pixmaps/$pkgname.svg
 
-    # Create a launcher script
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<EOF
 #!/bin/bash
-javaws /usr/share/java/$pkgname/chemiNot.jnlp
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+exec \$JAVA_HOME/bin/javaws /usr/share/java/$pkgname/chemiNot.jnlp
 EOF
 }
