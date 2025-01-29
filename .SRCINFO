@@ -1,7 +1,7 @@
 pkgbase = cheminot
 	pkgdesc = Application de gestion d'horaire de l'ETS (license unknown)
 	pkgver = 2022.01.04
-	pkgrel = 5
+	pkgrel = 6
 	url = https://cheminotjws.etsmtl.ca/
 	arch = x86_64
 	arch = aarch64
