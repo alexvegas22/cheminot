@@ -32,7 +32,7 @@ EOF
 
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<EOF
 #!/bin/bash
-JAVA_HOME=$(archlinux-java get 2>/dev/null | grep 'java-8' | sed 's|/jre||')
+JAVA_HOME=\$(archlinux-java get 2>/dev/null | grep 'java-8' | sed 's|/jre||')
 if [ -z "$JAVA_HOME" ]; then
   JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 fi
