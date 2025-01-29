@@ -1,12 +1,12 @@
 # Maintainer: Alex Vegas <v34l at proton dot me>
 pkgname=cheminot
 pkgver=2022.01.04
-pkgrel=2
+pkgrel=3
 pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
 arch=('x86_64' 'aarch64')
 url="https://cheminotjws.etsmtl.ca/"
 license=('custom')
-depends=('icedtea-web' 'java-runtime=8')
+depends=('icedtea-web' 'jre8-openjdk')
 source=(
     "https://cheminotjws.etsmtl.ca/chemiNot.jnlp"
     "https://www.etsmtl.ca/assets/img/ets.svg"
@@ -32,8 +32,7 @@ EOF
 
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<EOF
 #!/bin/bash
-JAVA_HOME=\$(archlinux-java status | grep 'java-8' | awk '{print $1}')
-[ -z "\$JAVA_HOME" ] && JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
+JAVA_HOME=$(archlinux-java get 2>/dev/null | grep 'java-8' || echo "/usr/lib/jvm/java-8-openjdk")
 JAVAWS=\$(command -v javaws || echo "/usr/sbin/javaws")
 exec "\$JAVAWS" /usr/share/java/$pkgname/chemiNot.jnlp
 EOF
