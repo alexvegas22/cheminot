@@ -1,7 +1,7 @@
 # Maintainer: Alex Vegas <v34l at proton dot me>
 pkgname=cheminot
 pkgver=2022.01.04
-pkgrel=7
+pkgrel=8
 pkgdesc="Application de gestion d'horaire de l'ETS (license unknown)"
 arch=('x86_64' 'aarch64')
 url="https://cheminotjws.etsmtl.ca/"
@@ -32,7 +32,7 @@ EOF
 
     install -Dm755 /dev/stdin "$pkgdir/usr/bin/$pkgname" <<EOF
 #!/bin/bash
-JAVA_HOME=\$(archlinux-java get 2>/dev/null | grep 'java-8' | sed 's|/jre||')
+export JAVA_HOME=\$(archlinux-java get 2>/dev/null | grep 'java-8' | sed 's|/jre||')
 if [ -z "$JAVA_HOME" ]; then
   JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 fi
